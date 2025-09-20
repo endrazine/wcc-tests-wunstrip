@@ -1,0 +1,2 @@
+*.ddeb filter=lfs diff=lfs merge=lfs -text
+testcases/apps/mysql-server-core-8.0-dbgsym_8.0.43-0ubuntu0.24.04.2_amd64.ddeb filter=lfs diff=lfs merge=lfs -text

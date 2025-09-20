@@ -242,14 +242,18 @@ Check binary integrity:
 bashwunstrip -d binary  # Verify build-id matches
 Citation
 If using this validation framework in academic work:
-bibtex@phdthesis{brossard2026beyond,
-  title={Beyond Reachability: Cross-Architecture Binary Libification and Procedural Debugging for Vulnerability Assessment},
+@INPROCEEDINGS{11141058,
   author={Brossard, Jonathan},
-  year={2026},
-  school={Conservatoire national des arts et métiers},
-  note={Chapter 4: Binary Unstripping, Appendix G: Validation Framework}
-}
-Related Projects
+  booktitle={2025 International Conference on Emerging Technologies and Computing (IC_ETC)}, 
+  title={Unstripping Cloud Container ELF Binaries}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Ground penetrating radar;Linux;Supply chains;Reverse engineering;Geophysical measurement techniques;Symbols;Europe;Debugging;Containers;Security;ELF unstripping;Reverse Engineering;Cloud binaries;NIS2;debugging},
+  doi={10.1109/IC_ETC65981.2025.11141058}}
+
+Related Projects:
 
 Witchcraft Compiler Collection - Main framework
 WCC Multi-Architecture Tests - Cross-architecture validation

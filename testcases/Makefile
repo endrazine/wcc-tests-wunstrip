@@ -1,48 +1,49 @@
 all::
 	cp /bin/ls /root/
 	wunstrip /root/ls -d -o ls.dbg
-	wunstrip /root/ls -e -o /root/ls.unstripped
+	wunstrip /root/ls -e -R -o /root/ls.unstripped
 
 	cp /usr/sbin/nginx /root/
 	wunstrip /root/nginx -d -o /root/nginx.dbg
-	wunstrip /root/nginx -e -o /root/nginx.unstripped
+	wunstrip /root/nginx -e -R -o /root/nginx.unstripped
 
 	cp /usr/sbin/sshd /root/
 	wunstrip /root/sshd -d -o /root/sshd.dbg
-	wunstrip /root/sshd -e -o /root/sshd.unstripped
+	wunstrip /root/sshd -e -R -o /root/sshd.unstripped
 
 	cp /usr/sbin/mysqld /root/
 	wunstrip /root/mysqld -d -o /root/mysqld.dbg
-	wunstrip /root/mysqld -e -o /root/mysqld.unstripped
+	wunstrip /root/mysqld -e -R -o /root/mysqld.unstripped
 
 	cp /lib/x86_64-linux-gnu/libjpeg.so.9.5.0 /root/
 	wunstrip /root/libjpeg.so.9.5.0 -d -o /root/libjpeg.so.9.5.0.dbg
-	wunstrip /root/libjpeg.so.9.5.0 -e -o /root/libjpeg.so.9.5.0.unstripped
+	wunstrip /root/libjpeg.so.9.5.0 -e -R -o /root/libjpeg.so.9.5.0.unstripped
 
 	cp /usr/sbin/proftpd /root/
 	wunstrip /root/proftpd -d -o /root/proftpd.dbg
-	wunstrip /root/proftpd -e -o /root/proftpd.unstripped
+	wunstrip /root/proftpd -e -R -o /root/proftpd.unstripped
 
 	cp /usr/sbin/smbd /root/
 	wunstrip /root/smbd -d -o /root/smbd.dbg
-	wunstrip /root/smbd -e -o /root/smbd.unstripped
+	wunstrip /root/smbd -e -R -o /root/smbd.unstripped
 
 	cp /usr/lib/postgresql/16/bin/postgres /root/
 	wunstrip /root/postgres -d -o /root/postgres.dbg
-	wunstrip /root/postgres -e -o /root/postgres.unstripped
+	wunstrip /root/postgres -e -R -o /root/postgres.unstripped
 
 	cp /usr/bin/vlc /root/
 	wunstrip /root/vlc -d -o /root/vlc.dbg
-	wunstrip /root/vlc -e -o /root/vlc.unstripped
+	wunstrip /root/vlc -e -R -o /root/vlc.unstripped
 
 	cp /lib/x86_64-linux-gnu/liblzma.so.5 /root/
 	wunstrip /root/liblzma.so.5 -d -o /root/liblzma.so.5.dbg
-	wunstrip /root/liblzma.so.5 -e -o /root/liblzma.so.5.unstripped
+	wunstrip /root/liblzma.so.5 -e -R -o /root/liblzma.so.5.unstripped
 
 prepare::
 	cp build/libLIEF.so /lib/x86_64-linux-gnu/libLIEF.so
 	cp build/libbfd-2.45.so /lib/x86_64-linux-gnu/
 	cp build/libsframe.so.2 /lib/x86_64-linux-gnu/
+	cp build/libpcre.so.3 /lib/x86_64-linux-gnu/libpcre.so.3
 	cp build/wunstrip /usr/bin/
 
 clean::
@@ -102,4 +103,3 @@ test::
 	./test_liblzma.sh
 	./false_positives.sh liblzma.so.5
 	./false_negatives.sh liblzma.so.5
-

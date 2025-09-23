@@ -290,5 +290,5 @@ Thesis: Appendix D - Complete Methodology
 License:
 Dual MIT/BSD License (consistent with WCC framework)
 
-Permanent Archive: 
+Permanent Archive: https://doi.org/10.5281/zenodo.17186203
 
